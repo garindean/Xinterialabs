@@ -102,21 +102,19 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="about" className="w-full py-12 md:py-24 lg:py-12 my-2">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Xinteria Labs</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  At Xinteria Labs, we're dedicated to building the next generation of financial technology solutions.
-                  Our team combines expertise in artificial intelligence, blockchain technology, and traditional finance
-                  to create innovative products that address real-world challenges in the financial markets.
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-0 mt-[-5px]">About Xinteria Labs</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed my-0 py-3.5 pt-14">
+                  At Xinteria Labs, we're dedicated to building the next generation of financial technology solutions. Our team combines expertise in artificial intelligence, blockchain technology, and traditional finance to create innovative products that address real-world challenges in the financial markets.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 my-36">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
