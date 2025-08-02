@@ -88,7 +88,7 @@ export default function Home() {
               <ProductCard
                 title="Xintellia"
                 description="Advanced AI-powered financial analytics platform"
-                comingSoon={false}
+                comingSoon={true}
                 href="https://xintellia.com"
                 imageUrl="/images/xintellia-hero.jpg"
               />

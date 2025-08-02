@@ -16,7 +16,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ title, description, comingSoon, href, imageUrl }: ProductCardProps) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden flex flex-col h-full">
       <div className="relative h-60">
         <Image
           src={title === "Xinteria Market Maker" ? "/images/xinteria-market-maker-hero.png" : imageUrl}
@@ -36,24 +36,18 @@ export default function ProductCard({ title, description, comingSoon, href, imag
           )}
         </div>
       </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
+      <CardContent className="flex-1 flex items-start">
+        <p className="text-muted-foreground min-h-[3rem]">{comingSoon ? "" : description}</p>
       </CardContent>
       <CardFooter>
-        {comingSoon ? (
-          <Button disabled variant="outline" className="w-full bg-transparent">
-            Coming Soon
-          </Button>
-        ) : (
-          <Button
-            asChild
-            className="w-full bg-gradient-to-r from-lime-500 to-teal-500 hover:from-lime-600 hover:to-teal-600 text-white"
-          >
-            <Link href={href || "#"}>
-              Learn More <ExternalLink className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        )}
+        <Button
+          asChild
+          className="w-full bg-gradient-to-r from-lime-500 to-teal-500 hover:from-lime-600 hover:to-teal-600 text-white"
+        >
+          <Link href={href || "#"}>
+            Learn More <ExternalLink className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
       </CardFooter>
     </Card>
   )
