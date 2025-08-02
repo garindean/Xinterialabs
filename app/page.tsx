@@ -22,7 +22,7 @@ export default function Home() {
               <span className="text-lg font-semibold text-xinteria-blue">Labs</span>
             </Link>
           </div>
-          <div className="ml-auto flex items-center space-x-4">
+          <div className="ml-auto flex items-center space-x-8">
             <Button variant="ghost" asChild>
               <Link href="#products">Products</Link>
             </Button>
@@ -84,12 +84,13 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-20 py-12 md:grid-cols-2">
               <ProductCard
                 title="Xintellia"
                 description="Advanced AI-powered financial analytics platform"
-                comingSoon={true}
-                imageUrl="/placeholder.svg?height=400&width=400"
+                comingSoon={false}
+                href="https://xintellia.com"
+                imageUrl="/images/xintellia-hero.jpg"
               />
               <ProductCard
                 title="Xinteria Market Maker"
@@ -140,7 +141,7 @@ export default function Home() {
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © 2025 Xinteria Labs. All rights reserved.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-8">
             <Link href="#" className="text-sm text-muted-foreground underline-offset-4 hover:underline">
               Privacy Policy
             </Link>
