@@ -93,11 +93,11 @@ export default function Home() {
                 imageUrl="/images/xintellia-hero.jpg"
               />
               <ProductCard
-                title="Xinteria Market Maker"
+                title="Xinteria MM"
                 description="Sophisticated market making solution for digital assets"
                 comingSoon={false}
                 href="/xinteria"
-                imageUrl="/placeholder.svg?height=400&width=400"
+                imageUrl="/images/xinteria-market-maker-hero.png"
               />
             </div>
           </div>
