@@ -7,24 +7,61 @@
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+This repository contains the Xinteria Labs website built with Next.js and optimized for deployment on Cloudflare Workers.
 
 ## Deployment
 
-Your project is live at:
+### Cloudflare Workers Deployment
 
-**[https://vercel.com/gbottens-projects/v0-xinteria-labs-design](https://vercel.com/gbottens-projects/v0-xinteria-labs-design)**
+1. **Install dependencies:**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-## Build your app
+2. **Build for Cloudflare:**
+   \`\`\`bash
+   npm run cf:build
+   \`\`\`
 
-Continue building your app on:
+3. **Deploy to Cloudflare Workers:**
+   \`\`\`bash
+   npm run cf:deploy
+   \`\`\`
 
-**[https://v0.dev/chat/projects/RrCGZRi2djN](https://v0.dev/chat/projects/RrCGZRi2djN)**
+### Alternative Deployment Methods
+
+**Cloudflare Pages:**
+\`\`\`bash
+npm run pages:build
+npm run pages:deploy
+\`\`\`
+
+**Local Development:**
+\`\`\`bash
+npm run dev
+\`\`\`
+
+**Worker Development:**
+\`\`\`bash
+npm run worker:dev
+\`\`\`
+
+## Build Process
+
+The build process:
+1. Runs `next build` to create the Next.js production build
+2. Uses `@cloudflare/next-on-pages` to convert the build for Cloudflare Workers
+3. Outputs the worker-compatible files to `.vercel/output/static/`
+
+## Configuration
+
+- **Next.js Config:** Configured for static export with image optimization disabled
+- **Wrangler Config:** Set up for Cloudflare Workers deployment
+- **Build Command:** `npm run cf:build` for Cloudflare compatibility
 
 ## How It Works
 
 1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+2. The Next.js app is built and converted to a Cloudflare Worker
+3. Static assets are served from Cloudflare's edge network
+4. Dynamic functionality runs on Cloudflare Workers

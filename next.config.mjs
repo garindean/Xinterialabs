@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Ensure static export for Cloudflare compatibility
+  output: 'export',
+  trailingSlash: true,
   // Configuration for Cloudflare Workers
   experimental: {
     serverComponentsExternalPackages: [],

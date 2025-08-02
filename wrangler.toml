@@ -2,22 +2,27 @@ name = "xinteria-labs"
 compatibility_date = "2024-01-15"
 compatibility_flags = ["nodejs_compat"]
 
-# Worker configuration - these paths will be created by @cloudflare/next-on-pages
+# Main entry point for the worker
 main = ".vercel/output/static/_worker.js"
+
+# Build configuration
+[build]
+command = "npm run cf:build"
 
 [env.production]
 name = "xinteria-labs-production"
 
-[env.staging]
+[env.staging]  
 name = "xinteria-labs-staging"
 
 # Environment variables
 [vars]
 NODE_ENV = "production"
 
-# Build configuration
-[build]
-command = "npm run build && npx @cloudflare/next-on-pages"
+# Assets configuration for static files
+[[assets]]
+directory = ".vercel/output/static"
+binding = "ASSETS"
 
 # Uncomment and configure these sections as needed:
 
