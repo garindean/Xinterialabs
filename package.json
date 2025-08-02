@@ -3,18 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build && npx @cloudflare/next-on-pages",
-    "cf:build": "next build && npx @cloudflare/next-on-pages",
-    "cf:deploy": "npm run cf:build && wrangler deploy",
+    "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "pages:build": "next build && npx @cloudflare/next-on-pages",
     "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
     "pages:dev": "npx @cloudflare/next-on-pages --dev",
-    "start": "next start",
-    "worker:build": "next build && npx @cloudflare/next-on-pages",
-    "worker:deploy": "npm run worker:build && wrangler deploy",
-    "worker:dev": "wrangler dev"
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
